@@ -1,0 +1,332 @@
+{
+  "socios": [
+    {
+      "id": 1,
+      "nombre": "Esteban Palacios",
+      "dni": "39.421.802",
+      "telefono": "+54 387 512-3489",
+      "plan": "Pase Libre (Todos los días)",
+      "cuota": 28000,
+      "estado": "Al día",
+      "vencimiento": "22/12/2026",
+      "clases_semanales": "Ilimitadas",
+      "clases_restantes": "Ilimitadas",
+      "asistencias_totales": 24,
+      "asistencias_semana": 0,
+      "ultima_asistencia": "03/11/2026 19:30"
+    },
+    {
+      "id": 2,
+      "nombre": "Carolina Méndez",
+      "dni": "41.092.311",
+      "telefono": "+54 387 498-2134",
+      "plan": "Promo Amigos",
+      "cuota": 23000,
+      "estado": "Vencido",
+      "vencimiento": "10/11/2026",
+      "clases_semanales": "Ilimitadas",
+      "clases_restantes": "Ilimitadas",
+      "asistencias_totales": 18,
+      "asistencias_semana": 0,
+      "ultima_asistencia": "02/11/2026 18:15"
+    },
+    {
+      "id": 3,
+      "nombre": "Federico Benítez",
+      "dni": "38.541.908",
+      "telefono": "+54 387 433-8812",
+      "plan": "Promo Amigos",
+      "cuota": 23000,
+      "estado": "Vencido",
+      "vencimiento": "10/11/2026",
+      "clases_semanales": "Ilimitadas",
+      "clases_restantes": "Ilimitadas",
+      "asistencias_totales": 19,
+      "asistencias_semana": 2,
+      "ultima_asistencia": "02/11/2026 18:15"
+    },
+    {
+      "id": 4,
+      "nombre": "Lucía Villalba",
+      "dni": "36.877.201",
+      "telefono": "+54 387 601-4475",
+      "plan": "Personalizados",
+      "cuota": 43000,
+      "estado": "Al día",
+      "vencimiento": "20/12/2026",
+      "clases_semanales": 12,
+      "clases_restantes": 12,
+      "asistencias_totales": 14,
+      "asistencias_semana": 0,
+      "ultima_asistencia": "17/10/2026 10:00"
+    },
+    {
+      "id": 5,
+      "nombre": "Matías Carrizo",
+      "dni": "42.115.689",
+      "telefono": "+54 387 477-9921",
+      "plan": "3 veces a la semana",
+      "cuota": 22000,
+      "estado": "Por vencer",
+      "vencimiento": "24/11/2026",
+      "clases_semanales": 3,
+      "clases_restantes": 2,
+      "asistencias_totales": 11,
+      "asistencias_semana": 1,
+      "ultima_asistencia": "03/11/2026 20:00"
+    }
+  ],
+  "stock": [
+    {
+      "id": 1,
+      "producto": "Proteína Whey (1kg Vainilla/Choc)",
+      "categoria": "Proteínas",
+      "stock": 18,
+      "precio": 38000,
+      "minimo": 5
+    },
+    {
+      "id": 2,
+      "producto": "Yogur Griego Natural Artesanal (500g)",
+      "categoria": "Refrigerados",
+      "stock": 24,
+      "precio": 4500,
+      "minimo": 8
+    },
+    {
+      "id": 3,
+      "producto": "Colágeno Hidrolizado Puro (300g)",
+      "categoria": "Salud Articular",
+      "stock": 12,
+      "precio": 29000,
+      "minimo": 4
+    },
+    {
+      "id": 4,
+      "producto": "Pre-entreno Explosive Energy (300g)",
+      "categoria": "Pre-entrenos",
+      "stock": 10,
+      "precio": 34000,
+      "minimo": 3
+    },
+    {
+      "id": 5,
+      "producto": "Creatina Creapure 300g",
+      "categoria": "Rendimiento",
+      "stock": 15,
+      "precio": 32000,
+      "minimo": 5
+    }
+  ],
+  "maquinas": [
+    {
+      "id": 1,
+      "nombre": "Cinta de Correr Profesional 01",
+      "zona": "Cardio",
+      "estado": "Operativa",
+      "revision": "15/10/2026"
+    },
+    {
+      "id": 2,
+      "nombre": "Cinta de Correr Profesional 02",
+      "zona": "Cardio",
+      "estado": "Operativa",
+      "revision": "15/10/2026"
+    },
+    {
+      "id": 3,
+      "nombre": "Prensa de Piernas 45°",
+      "zona": "Piernas",
+      "estado": "Operativa",
+      "revision": "10/10/2026"
+    },
+    {
+      "id": 4,
+      "nombre": "Doble Polea Regulable (Crossover)",
+      "zona": "Musculación",
+      "estado": "En mantenimiento",
+      "revision": "21/10/2026"
+    },
+    {
+      "id": 5,
+      "nombre": "Banco Plano Olímpico + Barra",
+      "zona": "Pecho",
+      "estado": "Operativa",
+      "revision": "01/10/2026"
+    },
+    {
+      "id": 6,
+      "nombre": "Bicicleta Estática Spinning 01",
+      "zona": "Cardio",
+      "estado": "Operativa",
+      "revision": "12/10/2026"
+    }
+  ],
+  "finanzas": {
+    "ingresos_mes": 2015000.0,
+    "egresos_mes": 690000,
+    "movimientos": [
+      {
+        "id": 8,
+        "tipo": "Ingreso",
+        "concepto": "Cobro cuota (1 mes): Esteban Palacios - Pase Libre (Todos los días)",
+        "monto": 28000.0,
+        "fecha": "22/11/2026"
+      },
+      {
+        "id": 7,
+        "tipo": "Ingreso",
+        "concepto": "Cobro cuota (1 mes): Carolina Méndez - Personalizados",
+        "monto": 43000.0,
+        "fecha": "20/11/2026"
+      },
+      {
+        "id": 6,
+        "tipo": "Ingreso",
+        "concepto": "Cobro cuota (2 meses (adelantado)): Esteban Palacios - Pase Libre (Todos los días)",
+        "monto": 56000.0,
+        "fecha": "20/11/2026"
+      },
+      {
+        "id": 5,
+        "tipo": "Ingreso",
+        "concepto": "Cobro cuota: Lucía Villalba (Personalizados)",
+        "monto": 43000.0,
+        "fecha": "20/11/2026"
+      },
+      {
+        "id": 1,
+        "tipo": "Ingreso",
+        "concepto": "Cobro cuotas (12 socios)",
+        "monto": 310000,
+        "fecha": "21/10/2026"
+      },
+      {
+        "id": 2,
+        "tipo": "Ingreso",
+        "concepto": "Venta tienda: 3 Proteínas + 4 Yogur",
+        "monto": 132000,
+        "fecha": "22/10/2026"
+      },
+      {
+        "id": 3,
+        "tipo": "Egreso",
+        "concepto": "Mantenimiento cable polea doble",
+        "monto": 45000,
+        "fecha": "21/10/2026"
+      },
+      {
+        "id": 4,
+        "tipo": "Egreso",
+        "concepto": "Reposición stock suplementos y bebidas",
+        "monto": 220000,
+        "fecha": "19/10/2026"
+      }
+    ]
+  },
+  "flujo_asistencia": {
+    "promedio": {
+      "08:00": 22,
+      "09:00": 42,
+      "10:00": 38,
+      "11:00": 25,
+      "12:00": 14,
+      "15:00": 20,
+      "16:00": 34,
+      "17:00": 52,
+      "18:00": 74,
+      "19:00": 82,
+      "20:00": 78,
+      "21:00": 60,
+      "22:00": 32,
+      "23:00": 10
+    },
+    "lunes": {
+      "08:00": 26,
+      "09:00": 48,
+      "10:00": 45,
+      "11:00": 30,
+      "12:00": 16,
+      "15:00": 24,
+      "16:00": 40,
+      "17:00": 58,
+      "18:00": 85,
+      "19:00": 92,
+      "20:00": 86,
+      "21:00": 68,
+      "22:00": 36,
+      "23:00": 12
+    },
+    "martes": {
+      "08:00": 20,
+      "09:00": 38,
+      "10:00": 36,
+      "11:00": 24,
+      "12:00": 12,
+      "15:00": 18,
+      "16:00": 32,
+      "17:00": 50,
+      "18:00": 72,
+      "19:00": 80,
+      "20:00": 75,
+      "21:00": 58,
+      "22:00": 30,
+      "23:00": 9
+    },
+    "miercoles": {
+      "08:00": 24,
+      "09:00": 44,
+      "10:00": 40,
+      "11:00": 26,
+      "12:00": 15,
+      "15:00": 22,
+      "16:00": 36,
+      "17:00": 54,
+      "18:00": 76,
+      "19:00": 84,
+      "20:00": 80,
+      "21:00": 62,
+      "22:00": 34,
+      "23:00": 11
+    },
+    "jueves": {
+      "08:00": 19,
+      "09:00": 36,
+      "10:00": 34,
+      "11:00": 22,
+      "12:00": 11,
+      "15:00": 17,
+      "16:00": 30,
+      "17:00": 48,
+      "18:00": 70,
+      "19:00": 78,
+      "20:00": 72,
+      "21:00": 55,
+      "22:00": 28,
+      "23:00": 8
+    },
+    "viernes": {
+      "08:00": 25,
+      "09:00": 45,
+      "10:00": 42,
+      "11:00": 28,
+      "12:00": 14,
+      "15:00": 22,
+      "16:00": 38,
+      "17:00": 55,
+      "18:00": 78,
+      "19:00": 86,
+      "20:00": 74,
+      "21:00": 48,
+      "22:00": 22,
+      "23:00": 6
+    },
+    "sabado": {
+      "09:00": 35,
+      "10:00": 58,
+      "11:00": 64,
+      "12:00": 40
+    }
+  },
+  "checkins_log": []
+}

@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GIMNASIO ONE+ | Salta, Palermo - Centro de Entrenamiento & Nutrición</title>
+  <meta name="description" content="Gimnasio ONE+ en Palermo, Salta. Musculación, cardio, personalizados, suplementación y las mejores promociones para entrenar al máximo.">
+  <link rel="stylesheet" href="/styles.css">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Google Fonts: Archivo Black (Títulos) y Roboto Slab (General) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- GSAP Library for StrokeText Animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <!-- Chart.js for Admin Analytics -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- ===================================================================
+       VISTA PÚBLICA (ONE+ GIMNASIO)
+       =================================================================== -->
+  <div id="public-view">
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#inicio" class="brand-logo">
+          one<span class="plus">+</span>
+          <span class="brand-pill">GYM</span>
+        </a>
+
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#ofertas" class="nav-link">Ofertas</a></li>
+          <li><a href="#precios" class="nav-link">Precios</a></li>
+          <li><a href="#horarios" class="nav-link">Horarios</a></li>
+          <li><a href="#servicios" class="nav-link">Servicios</a></li>
+          <li><a href="#productos" class="nav-link">Tienda</a></li>
+          <li><a href="#ubicacion" class="nav-link">Ubicación</a></li>
+          <li><a href="#libro-visitas" class="nav-link">Libro de Visitas</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <!-- Botón de Modo Oscuro / Claro -->
+          <button id="theme-toggle" class="btn-theme-toggle" title="Cambiar a Modo Oscuro / Claro" aria-label="Cambiar tema">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+
+          <!-- Botón de Acceso Admin -->
+          <button id="btn-open-login" class="btn-admin" title="Panel de Administrador">
+            <i class="fa-solid fa-lock"></i>
+            <span>Zona Admin</span>
+          </button>
+
+          <!-- Toggle Móvil -->
+          <button id="mobile-menu-btn" class="btn-mobile-toggle" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section id="inicio" class="hero">
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <div class="hero-tag">
+                <span class="dot"></span>
+                GIMNASIO DE ALTO RENDIMIENTO &bull; PALERMO, SALTA
+              </div>
+
+              <!-- CONTENEDOR DEL TITULO CON STROKETEXT DE REACT BITS (ARCHIVO BLACK) -->
+              <div id="hero-stroke-text-wrap" class="hero-title-wrap">
+                <h1 class="hero-title-static">
+                  GIMNASIO <span class="highlight">ONE+</span>
+                </h1>
+              </div>
+
+              <p class="hero-subtitle">
+                Tu centro de entrenamiento de fuerza, musculación, cardio y nutrición deportiva en Palermo, Salta. Equipamiento de primer nivel y seguimiento para superar tus límites.
+              </p>
+              <div class="hero-actions">
+                <a href="#ofertas" class="btn-primary">
+                  <i class="fa-solid fa-users"></i>
+                  Ver Promo Amigos ($23k)
+                </a>
+                <a href="#precios" class="btn-secondary">
+                  <i class="fa-solid fa-tag"></i>
+                  Consultar Precios
+                </a>
+              </div>
+              <div class="hero-badges">
+                <div class="hero-badge-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Musculación & Cardio</span>
+                </div>
+                <div class="hero-badge-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Clases Personalizadas</span>
+                </div>
+                <div class="hero-badge-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>Bar & Suplementación</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tarjeta Informativa Hero -->
+            <div class="hero-card">
+              <div id="live-gym-status" class="status-live-pill open">
+                <i class="fa-solid fa-clock"></i>
+                <span>Gimnasio Abierto</span>
+              </div>
+              <h3 class="hero-card-title">one+ Palermo Gym</h3>
+              <p class="hero-card-text">
+                Tu espacio de transformación física en Salta Capital. Planes accesibles, ambiente climatizado y asesoramiento continuo.
+              </p>
+
+              <div class="hero-schedule-mini">
+                <div class="hero-schedule-row">
+                  <span>Lunes a Viernes</span>
+                  <span>8:00-12:00 / 15:00-23:00</span>
+                </div>
+                <div class="hero-schedule-row">
+                  <span>Sábados</span>
+                  <span>9:00 - 12:00</span>
+                </div>
+                <div class="hero-schedule-row">
+                  <span>Domingos</span>
+                  <span>Cerrado (Descanso)</span>
+                </div>
+              </div>
+
+              <a href="https://wa.me/5493875123489?text=Hola%20one+%20Gym!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20para%20empezar%20a%20entrenar." target="_blank" rel="noopener noreferrer" class="btn-primary" style="width: 100%; justify-content: center;">
+                <i class="fa-brands fa-whatsapp"></i>
+                Escribinos por WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OFERTAS DESTACADAS -->
+      <section id="ofertas" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fa-solid fa-fire"></i>
+              Oportunidad Única
+            </span>
+            <h2 class="section-title">Ofertas y Promociones Especiales</h2>
+            <p class="section-desc">
+              Entrenar en equipo siempre es mejor. Aprovechá nuestra promo especial para venir con tu compañero de entrenamiento y ahorrar todos los meses.
+            </p>
+          </div>
+
+          <!-- BANNER PROMO AMIGOS -->
+          <div class="promo-banner">
+            <div class="promo-grid">
+              <div class="promo-info">
+                <span class="promo-tag">
+                  <i class="fa-solid fa-user-group"></i> Promo Dúo / Amigos
+                </span>
+                <h3 class="promo-title">¡Si pagás con un amigo, pagan $23.000 cada uno!</h3>
+                <p class="promo-desc">
+                  Vení a inscribirte junto a tu amigo, pareja o compañero de entrenamiento y los dos acceden a pase completo por solo <strong>$23.000 cada uno</strong> en lugar de la tarifa individual de $28.000. ¡Ahorran $10.000 en total por mes!
+                </p>
+                <div style="margin-top: 1.5rem;">
+                  <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20anotarme%20con%20mi%20amigo%20en%20la%20Promo%20Amigos%20de%2023mil" target="_blank" class="btn-primary">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    Anotarme con mi Amigo
+                  </a>
+                </div>
+              </div>
+
+              <div class="promo-price-box">
+                <div class="promo-price-old">Normal: $28.000 c/u</div>
+                <div class="promo-price-val">$23.000</div>
+                <div class="promo-price-sub">por mes cada uno</div>
+                <span class="status-chip success" style="font-size: 0.85rem; padding: 0.35rem 0.85rem;">
+                  <i class="fa-solid fa-tag"></i> Ahorrás $5.000 c/u
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PRECIOS Y PLANES -->
+      <section id="precios" class="section" style="background: var(--bg-surface);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fa-solid fa-ticket"></i>
+              Membresías Claras
+            </span>
+            <h2 class="section-title">Nuestros Planes y Precios</h2>
+            <p class="section-desc">
+              Tarifas transparentes, sin costos ocultos de inscripción. Elegí el formato que mejor se adapte a tu rutina y objetivos.
+            </p>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Plan 1: 3 veces por semana -->
+            <div class="pricing-card">
+              <span class="pricing-badge">Alternado</span>
+              <h3 class="pricing-name">3 Veces por Semana</h3>
+              <p class="pricing-desc">Ideal para quienes combinan con otros deportes o rutinas divididas.</p>
+              <div class="pricing-price">
+                <span class="currency">$</span>
+                <span class="amount">22.000</span>
+                <span class="period">/ mes</span>
+              </div>
+              <ul class="pricing-features">
+                <li><i class="fa-solid fa-check"></i> 3 accesos semanales a elección</li>
+                <li><i class="fa-solid fa-check"></i> Sala de musculación y peso libre</li>
+                <li><i class="fa-solid fa-check"></i> Sector de cardio completo</li>
+                <li><i class="fa-solid fa-check"></i> Asesoramiento inicial de rutina</li>
+              </ul>
+              <a href="https://wa.me/5493875123489?text=Hola!%20Me%20interesa%20el%20plan%20de%203%20veces%20por%20semana%20($22.000)" target="_blank" class="pricing-btn">Elegir Plan</a>
+            </div>
+
+            <!-- Plan 2: Pase Libre Todos los días (Destacado) -->
+            <div class="pricing-card featured">
+              <div class="featured-ribbon">Más Elegido</div>
+              <span class="pricing-badge" style="background: var(--accent-green); color: #03170e;">Pase Libre Total</span>
+              <h3 class="pricing-name">Todos los Días</h3>
+              <p class="pricing-desc">Entrenamiento ilimitado de lunes a sábado sin restricción de horario.</p>
+              <div class="pricing-price">
+                <span class="currency">$</span>
+                <span class="amount">28.000</span>
+                <span class="period">/ mes</span>
+              </div>
+              <ul class="pricing-features">
+                <li><i class="fa-solid fa-check"></i> Acceso ilimitado todos los días</li>
+                <li><i class="fa-solid fa-check"></i> Doble turno Lun a Vie + Sábados</li>
+                <li><i class="fa-solid fa-check"></i> Acceso a todas las máquinas y pesas</li>
+                <li><i class="fa-solid fa-check"></i> Seguimiento y ajuste de rutina</li>
+                <li><i class="fa-solid fa-check"></i> Descuento especial en la tienda</li>
+              </ul>
+              <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20anotarme%20al%20Pase%20Libre%20de%20Todos%20los%20d%C3%ADas%20($28.000)" target="_blank" class="pricing-btn">Comenzar Ahora</a>
+            </div>
+
+            <!-- Plan 3: Personalizados -->
+            <div class="pricing-card">
+              <span class="pricing-badge">Atención 1 a 1</span>
+              <h3 class="pricing-name">Personalizados</h3>
+              <p class="pricing-desc">Profesor dedicado 100% a tu técnica, progresión de cargas y metas.</p>
+              <div class="pricing-price">
+                <span class="currency">$</span>
+                <span class="amount">43.000</span>
+                <span class="period">/ mes</span>
+              </div>
+              <ul class="pricing-features">
+                <li><i class="fa-solid fa-check"></i> Instructor personal exclusivo</li>
+                <li><i class="fa-solid fa-check"></i> Planificación biométrica a medida</li>
+                <li><i class="fa-solid fa-check"></i> Corrección postural milimétrica</li>
+                <li><i class="fa-solid fa-check"></i> Máxima velocidad en resultados</li>
+                <li><i class="fa-solid fa-check"></i> Guía nutricional y de suplementos</li>
+              </ul>
+              <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20consultar%20por%20las%20clases%20Personalizadas%20($43.000)" target="_blank" class="pricing-btn">Consultar Personalizado</a>
+            </div>
+
+            <!-- Plan 4: Clase Suelta -->
+            <div class="pricing-card">
+              <span class="pricing-badge">Pase Diario</span>
+              <h3 class="pricing-name">Clase Suelta</h3>
+              <p class="pricing-desc">Pagás por día cuando venís. Ideal para viajeros o visitas ocasionales.</p>
+              <div class="pricing-price">
+                <span class="currency">$</span>
+                <span class="amount">8.000</span>
+                <span class="period">/ clase</span>
+              </div>
+              <ul class="pricing-features">
+                <li><i class="fa-solid fa-check"></i> 1 entrenamiento completo por día</li>
+                <li><i class="fa-solid fa-check"></i> Uso de todas las instalaciones</li>
+                <li><i class="fa-solid fa-check"></i> Sin cuota de inscripción previa</li>
+                <li><i class="fa-solid fa-check"></i> Duchas y vestuarios disponibles</li>
+              </ul>
+              <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20ir%20a%20hacer%20una%20clase%20suelta%20($8.000)" target="_blank" class="pricing-btn">Entrenar Hoy</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DÍAS Y HORARIOS -->
+      <section id="horarios" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fa-solid fa-calendar-days"></i>
+              Organización
+            </span>
+            <h2 class="section-title">Días y Horarios de Atención</h2>
+            <p class="section-desc">
+              Horarios flexibles en doble turno para que nunca te falte tiempo para entrenar antes o después de tu jornada.
+            </p>
+          </div>
+
+          <div class="schedule-grid">
+            <div class="schedule-card">
+              <div class="schedule-header">
+                <div class="schedule-icon">
+                  <i class="fa-solid fa-dumbbell"></i>
+                </div>
+                <div>
+                  <h3 class="schedule-card-title">Lunes a Viernes</h3>
+                  <span class="schedule-pill-badge">Doble Turno Extendido</span>
+                </div>
+              </div>
+              <div class="schedule-hours-box">
+                <div class="hours-item">
+                  <span class="hours-label"><i class="fa-solid fa-sun" style="color: #f59e0b; margin-right: 6px;"></i> Turno Mañana:</span>
+                  <span class="hours-value">08:00 a 12:00 hs</span>
+                </div>
+                <div class="hours-item">
+                  <span class="hours-label"><i class="fa-solid fa-moon" style="color: var(--accent-green); margin-right: 6px;"></i> Turno Tarde / Noche:</span>
+                  <span class="hours-value">15:00 a 23:00 hs</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="schedule-card">
+              <div class="schedule-header">
+                <div class="schedule-icon">
+                  <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                  <h3 class="schedule-card-title">Sábados</h3>
+                  <span class="schedule-pill-badge">Turno Mañana</span>
+                </div>
+              </div>
+              <div class="schedule-hours-box">
+                <div class="hours-item">
+                  <span class="hours-label"><i class="fa-solid fa-sun" style="color: #f59e0b; margin-right: 6px;"></i> Turno Único:</span>
+                  <span class="hours-value">09:00 a 12:00 hs</span>
+                </div>
+                <div class="hours-item">
+                  <span class="hours-label"><i class="fa-solid fa-bed" style="color: var(--text-muted); margin-right: 6px;"></i> Turno Tarde:</span>
+                  <span class="hours-value" style="color: var(--text-muted);">Cerrado</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="schedule-card">
+              <div class="schedule-header">
+                <div class="schedule-icon">
+                  <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <div>
+                  <h3 class="schedule-card-title">Domingos</h3>
+                  <span class="schedule-pill-badge" style="background: var(--status-warning-bg); color: var(--status-warning);">Recuperación</span>
+                </div>
+              </div>
+              <div class="schedule-hours-box">
+                <div class="hours-item">
+                  <span class="hours-label">Día de Descanso:</span>
+                  <span class="hours-value" style="color: var(--status-warning);">Cerrado</span>
+                </div>
+                <div class="hours-item">
+                  <span class="hours-label">Recarga energética:</span>
+                  <span class="hours-value">Descanso total</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICIOS OFRECIDOS -->
+      <section id="servicios" class="section" style="background: var(--bg-surface);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fa-solid fa-layer-group"></i>
+              Lo Que Ofrecemos
+            </span>
+            <h2 class="section-title">Nuestras Áreas de Entrenamiento</h2>
+            <p class="section-desc">
+              Espacios sectorizados y adaptados para cada disciplina, desde hipertrofia y fuerza pura hasta acondicionamiento cardiovascular.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-user-ninja"></i>
+              </div>
+              <h3 class="service-title">Entrenamientos Personalizados</h3>
+              <p class="service-desc">
+                Un profesor calificado diseña y supervisa cada serie, ajustando las cargas según tu condición física y previniendo lesiones.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Atención 1 a 1</span>
+                <span class="service-tag">Plan Nutricional</span>
+                <span class="service-tag">Evaluación Periódica</span>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-person-running"></i>
+              </div>
+              <h3 class="service-title">Cardio & Resistencia</h3>
+              <p class="service-desc">
+                Cintas profesionales de última generación, bicicletas estáticas para spinning y elípticos para potenciar tu salud cardiovascular.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Cintas Profesionales</span>
+                <span class="service-tag">Bicis Spinning</span>
+                <span class="service-tag">Quema de Grasa</span>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-weight-hanging"></i>
+              </div>
+              <h3 class="service-title">Musculación & Pesas Libres</h3>
+              <p class="service-desc">
+                Mancuernas calibradas de 1 a 40 kg, barras olímpicas, bancos regulables, discos de fundición y jaulas para sentadillas seguras.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Barras Olímpicas</span>
+                <span class="service-tag">Mancuernas Pro</span>
+                <span class="service-tag">Jaulas de Fuerza</span>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="service-icon-box">
+                <i class="fa-solid fa-medal"></i>
+              </div>
+              <h3 class="service-title">Funcional & Calistenia</h3>
+              <p class="service-desc">
+                Circuitos dinámicos, sogas de batalla, bandas elásticas, kettlebells y barras de dominadas para ganar agilidad, potencia y movilidad.
+              </p>
+              <div class="service-tags">
+                <span class="service-tag">Kettlebells</span>
+                <span class="service-tag">Battle Ropes</span>
+                <span class="service-tag">Core y Movilidad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIENDA Y SUPLEMENTOS (FOTOS REALES + TITULO ARRIBA DE LA IMAGEN + PRECIO Y COMPRAR) -->
+      <section id="productos" class="section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fa-solid fa-bottle-droplet"></i>
+              Nutrición & Suplementación
+            </span>
+            <h2 class="section-title">Lo Que Vendemos en one+</h2>
+            <p class="section-desc">
+              Todo lo que tu cuerpo necesita antes, durante y después de entrenar para acelerar la recuperación y alimentar tus músculos.
+            </p>
+          </div>
+
+          <div class="products-grid">
+            <!-- Producto 1: Proteínas -->
+            <div class="product-card">
+              <!-- 1. TÍTULO ARRIBA DE LA IMAGEN -->
+              <div class="product-header-top">
+                <span class="product-category">PROTEÍNAS</span>
+                <h4 class="product-name">Whey Protein Pura 100% (1kg)</h4>
+              </div>
+
+              <!-- 2. FOTO DEL PRODUCTO -->
+              <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?w=600&auto=format&fit=crop&q=80" alt="Whey Protein ONE+ Gym" class="product-img" loading="lazy">
+              </div>
+
+              <!-- 3. BREVE DESCRIPCIÓN DEBAJO -->
+              <p class="product-desc">
+                Concentrado de suero de máxima pureza para recuperación muscular acelerada y volumen limpio. Sabores: Vainilla, Chocolate Suizo y Frutilla.
+              </p>
+
+              <!-- 4. PRECIO ABAJO A LA DERECHA Y BOTÓN COMPRAR -->
+              <div class="product-bottom-bar">
+                <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20comprar%20Proteina%20Whey%20en%20ONE+" target="_blank" class="btn-primary product-buy-btn">
+                  <i class="fa-solid fa-cart-shopping"></i> Comprar
+                </a>
+                <div class="product-price-box">
+                  <span class="product-price-label">Precio</span>
+                  <span class="product-price">$38.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 2: Yogur Griego -->
+            <div class="product-card">
+              <!-- 1. TÍTULO ARRIBA DE LA IMAGEN -->
+              <div class="product-header-top">
+                <span class="product-category">REFRIGERADOS</span>
+                <h4 class="product-name">Yogur Griego Natural (500g)</h4>
+              </div>
+
+              <!-- 2. FOTO DEL PRODUCTO -->
+              <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=600&auto=format&fit=crop&q=80" alt="Yogur Griego Natural ONE+ Gym" class="product-img" loading="lazy">
+              </div>
+
+              <!-- 3. BREVE DESCRIPCIÓN DEBAJO -->
+              <p class="product-desc">
+                Cremoso y artesanal, sin azúcares agregados. Repleto de proteínas biológicas naturales y probióticos para tu salud digestiva.
+              </p>
+
+              <!-- 4. PRECIO ABAJO A LA DERECHA Y BOTÓN COMPRAR -->
+              <div class="product-bottom-bar">
+                <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20reservar%20un%20Yogur%20Griego%20en%20ONE+" target="_blank" class="btn-primary product-buy-btn">
+                  <i class="fa-solid fa-cart-shopping"></i> Comprar
+                </a>
+                <div class="product-price-box">
+                  <span class="product-price-label">Precio</span>
+                  <span class="product-price">$4.500</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 3: Colágeno -->
+            <div class="product-card">
+              <!-- 1. TÍTULO ARRIBA DE LA IMAGEN -->
+              <div class="product-header-top">
+                <span class="product-category">SALUD ARTICULAR</span>
+                <h4 class="product-name">Colágeno Hidrolizado (300g)</h4>
+              </div>
+
+              <!-- 2. FOTO DEL PRODUCTO -->
+              <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop&q=80" alt="Colágeno Hidrolizado ONE+ Gym" class="product-img" loading="lazy">
+              </div>
+
+              <!-- 3. BREVE DESCRIPCIÓN DEBAJO -->
+              <p class="product-desc">
+                Fórmula con vitamina C para máxima absorción. Refuerza tendones, articulaciones y ligamentos sometidos a cargas intensas.
+              </p>
+
+              <!-- 4. PRECIO ABAJO A LA DERECHA Y BOTÓN COMPRAR -->
+              <div class="product-bottom-bar">
+                <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20comprar%20Colageno%20Hidrolizado%20en%20ONE+" target="_blank" class="btn-primary product-buy-btn">
+                  <i class="fa-solid fa-cart-shopping"></i> Comprar
+                </a>
+                <div class="product-price-box">
+                  <span class="product-price-label">Precio</span>
+                  <span class="product-price">$29.000</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Producto 4: Pre-entreno -->
+            <div class="product-card">
+              <!-- 1. TÍTULO ARRIBA DE LA IMAGEN -->
+              <div class="product-header-top">
+                <span class="product-category">PRE-ENTRENO</span>
+                <h4 class="product-name">Pre-Entreno Explosive Energy</h4>
+              </div>
+
+              <!-- 2. FOTO DEL PRODUCTO -->
+              <div class="product-image-wrap">
+                <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&auto=format&fit=crop&q=80" alt="Pre-entreno Shot ONE+ Gym" class="product-img" loading="lazy">
+              </div>
+
+              <!-- 3. BREVE DESCRIPCIÓN DEBAJO -->
+              <p class="product-desc">
+                Fórmula con beta-alanina, cafeína anhidra y óxido nítrico para vasodilatación máxima, enfoque mental láser y energía extrema.
+              </p>
+
+              <!-- 4. PRECIO ABAJO A LA DERECHA Y BOTÓN COMPRAR -->
+              <div class="product-bottom-bar">
+                <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20comprar%20el%20Pre-entreno%20en%20ONE+" target="_blank" class="btn-primary product-buy-btn">
+                  <i class="fa-solid fa-cart-shopping"></i> Comprar
+                </a>
+                <div class="product-price-box">
+                  <span class="product-price-label">Precio</span>
+                  <span class="product-price">$34.000</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- UBICACIÓN Y CONTACTO -->
+      <section id="ubicacion" class="section" style="background: var(--bg-surface);">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fa-solid fa-location-dot"></i>
+              Encontranos
+            </span>
+            <h2 class="section-title">Ubicación y Contacto Directo</h2>
+            <p class="section-desc">
+              Estamos en una zona estratégica y accesible de Salta. Pasá a conocer el gimnasio y hacé tu primera clase de prueba.
+            </p>
+          </div>
+
+          <div class="location-grid">
+            <div class="location-info-card">
+              <div>
+                <div class="location-detail-item">
+                  <div class="location-icon">
+                    <i class="fa-solid fa-map-pin"></i>
+                  </div>
+                  <div class="location-text">
+                    <h4>Dirección</h4>
+                    <p>Palermo gym one+, Salta Capital, Provincia de Salta, Argentina.</p>
+                  </div>
+                </div>
+
+                <div class="location-detail-item">
+                  <div class="location-icon">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </div>
+                  <div class="location-text">
+                    <h4>Teléfono & WhatsApp de Contacto</h4>
+                    <p><a href="tel:+543875123489" style="font-weight: 800; color: var(--accent-green);">+54 387 512-3489</a></p>
+                    <p style="font-size: 0.88rem; color: var(--text-muted);">Atención personalizada de lunes a sábados.</p>
+                  </div>
+                </div>
+
+                <div class="location-detail-item">
+                  <div class="location-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="location-text">
+                    <h4>Correo Electrónico</h4>
+                    <p>contacto@oneplusgym.com.ar</p>
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-top: 1.5rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="https://wa.me/5493875123489?text=Hola!%20Quiero%20hacer%20una%20consulta%20sobre%20one+%20Gym" target="_blank" class="btn-primary">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  Contactar por WhatsApp
+                </a>
+                <a href="#precios" class="btn-secondary">
+                  Ver Planes
+                </a>
+              </div>
+            </div>
+
+            <!-- Mapa / Preview Interactivo -->
+            <div class="location-map-card">
+              <div class="map-placeholder">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <h3>Palermo gym one+</h3>
+                <p>Salta, Argentina &bull; Excelente ubicación con estacionamiento cómodo para bicis, motos y autos.</p>
+                <a href="https://maps.google.com/?q=Salta+Argentina+Palermo" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  Abrir en Google Maps
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIBRO DE VISITAS -->
+      <section id="libro-visitas" class="section guestbook-section">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag">
+              <i class="fa-solid fa-comment-dots"></i>
+              Comunidad ONE+
+            </span>
+            <h2 class="section-title">Libro de Visitas</h2>
+            <p class="section-desc">
+              Dejanos tu saludo, experiencia o reseña sobre nuestro gimnasio. ¡Tu opinión motiva a toda la comunidad a seguir entrenando!
+            </p>
+          </div>
+
+          <div class="guestbook-grid">
+            <!-- Formulario de Mensaje -->
+            <div class="guestbook-form-card">
+              <h3 style="font-size: 1.35rem; font-weight: 900; margin-bottom: 0.5rem;">
+                <i class="fa-solid fa-pen-to-square" style="color: var(--accent-green); margin-right: 0.4rem;"></i>
+                Dejá tu Mensaje
+              </h3>
+              <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                Completá los campos y tu mensaje se publicará al instante en nuestra cartelera digital.
+              </p>
+
+              <form id="guestbook-form">
+                <div class="form-group">
+                  <label class="form-label" for="gb-nombre">Tu Nombre o Apodo *</label>
+                  <input type="text" id="gb-nombre" class="form-input" placeholder="Ej: Marcos Ramos" required minlength="2" maxlength="100">
+                </div>
+
+                <div class="form-group">
+                  <label class="form-label" for="gb-texto">Tu Mensaje / Comentario *</label>
+                  <textarea id="gb-texto" class="form-textarea" placeholder="Contanos qué tal tu entrenamiento, la atención o tu progreso en el gym..." required minlength="3" maxlength="1000"></textarea>
+                  <div class="form-hint">Máximo 1000 caracteres. Respetuoso con la comunidad.</div>
+                </div>
+
+                <button type="submit" id="gb-submit-btn" class="btn-primary" style="width: 100%; justify-content: center;">
+                  <i class="fa-solid fa-paper-plane"></i>
+                  <span>Publicar Mensaje</span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Lista de Mensajes cargados dinámicamente -->
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem;">
+                <h4 style="font-size: 1.2rem; font-weight: 900;">
+                  Mensajes de Visitantes (<span id="gb-count">0</span>)
+                </h4>
+                <button id="gb-refresh-btn" class="btn-table-action" title="Recargar lista">
+                  <i class="fa-solid fa-rotate-right"></i> Actualizar
+                </button>
+              </div>
+
+              <div id="guestbook-list" class="guestbook-list-container">
+                <!-- SKELETON LOADERS (Misma forma que las tarjetas reales mientras cargan los datos) -->
+                <div class="skeleton-message-card">
+                  <div class="skeleton-header">
+                    <div class="skeleton-author">
+                      <div class="skeleton-avatar skeleton-pulse"></div>
+                      <div class="skeleton-meta">
+                        <div class="skeleton-line skeleton-name skeleton-pulse"></div>
+                        <div class="skeleton-line skeleton-date skeleton-pulse"></div>
+                      </div>
+                    </div>
+                    <div class="skeleton-btn skeleton-pulse"></div>
+                  </div>
+                  <div class="skeleton-body">
+                    <div class="skeleton-line skeleton-text skeleton-pulse" style="width: 100%;"></div>
+                    <div class="skeleton-line skeleton-text skeleton-pulse" style="width: 88%;"></div>
+                    <div class="skeleton-line skeleton-text skeleton-pulse" style="width: 60%;"></div>
+                  </div>
+                </div>
+
+                <div class="skeleton-message-card">
+                  <div class="skeleton-header">
+                    <div class="skeleton-author">
+                      <div class="skeleton-avatar skeleton-pulse"></div>
+                      <div class="skeleton-meta">
+                        <div class="skeleton-line skeleton-name skeleton-pulse" style="width: 160px;"></div>
+                        <div class="skeleton-line skeleton-date skeleton-pulse" style="width: 80px;"></div>
+                      </div>
+                    </div>
+                    <div class="skeleton-btn skeleton-pulse"></div>
+                  </div>
+                  <div class="skeleton-body">
+                    <div class="skeleton-line skeleton-text skeleton-pulse" style="width: 96%;"></div>
+                    <div class="skeleton-line skeleton-text skeleton-pulse" style="width: 82%;"></div>
+                    <div class="skeleton-line skeleton-text skeleton-pulse" style="width: 50%;"></div>
+                  </div>
+                </div>
+
+                <div class="skeleton-message-card">
+                  <div class="skeleton-header">
+                    <div class="skeleton-author">
+                      <div class="skeleton-avatar skeleton-pulse"></div>
+                      <div class="skeleton-meta">
+                        <div class="skeleton-line skeleton-name skeleton-pulse" style="width: 130px;"></div>
+                        <div class="skeleton-line skeleton-date skeleton-pulse" style="width: 100px;"></div>
+                      </div>
+                    </div>
+                    <div class="skeleton-btn skeleton-pulse"></div>
+                  </div>
+                  <div class="skeleton-body">
+                    <div class="skeleton-line skeleton-text skeleton-pulse" style="width: 100%;"></div>
+                    <div class="skeleton-line skeleton-text skeleton-pulse" style="width: 70%;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-logo">
+              one<span class="plus">+</span>
+              <span class="brand-pill">GYM</span>
+            </div>
+            <p>
+              El gimnasio de Palermo, Salta, enfocado en tu salud, estética y potencia física. Entrená con nosotros y marcá la diferencia.
+            </p>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Navegación</h4>
+            <ul class="footer-links">
+              <li><a href="#inicio">Inicio</a></li>
+              <li><a href="#ofertas">Ofertas & Promo</a></li>
+              <li><a href="#precios">Precios y Planes</a></li>
+              <li><a href="#horarios">Días y Horarios</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Servicios & Tienda</h4>
+            <ul class="footer-links">
+              <li><a href="#servicios">Personalizados</a></li>
+              <li><a href="#servicios">Cardio & Musculación</a></li>
+              <li><a href="#productos">Proteínas & Suplementos</a></li>
+              <li><a href="#productos">Yogur Griego & Snacks</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Administración</h4>
+            <ul class="footer-links">
+              <li><a href="#" id="footer-admin-link"><i class="fa-solid fa-shield-halved" style="color: var(--accent-green); margin-right: 6px;"></i>Acceso Administrador</a></li>
+              <li><a href="/docs" target="_blank"><i class="fa-solid fa-book" style="margin-right: 6px;"></i>Documentación API (/docs)</a></li>
+              <li><a href="https://wa.me/5493875123489" target="_blank"><i class="fa-brands fa-whatsapp" style="margin-right: 6px;"></i>WhatsApp Directo</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; <span id="current-year">2026</span> <strong>one+ Gym</strong> &bull; Salta, Argentina. Todos los derechos reservados.
+          </div>
+          <div>
+            Tipografía <strong>Archivo Black</strong> & <strong>Roboto Slab</strong>. Rápido, ligero y optimizado.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL DE INGRESO PARA ADMINISTRADORES
+       (SIN CARTEL DE CONTRASEÑA + OPCIÓN DE VISIBILIDAD DE CONTRASEÑA)
+       =================================================================== -->
+  <div id="login-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" id="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-lock"></i>
+        </div>
+        <h3 class="modal-title">Zona Administradores</h3>
+        <p class="modal-subtitle">Ingresá tus credenciales autorizadas de ONE+ Gym</p>
+      </div>
+
+      <!-- El cartel con usuario y contraseña fue removido totalmente -->
+
+      <form id="admin-login-form">
+        <div class="form-group">
+          <label class="form-label" for="login-username">Usuario</label>
+          <input type="text" id="login-username" class="form-input" placeholder="Nombre de usuario" required autocomplete="username">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="login-password">Contraseña</label>
+          <div class="password-input-wrap">
+            <input type="password" id="login-password" class="form-input" placeholder="••••••••" required autocomplete="current-password">
+            <!-- Botón para activar y desactivar visibilidad de contraseña -->
+            <button type="button" id="toggle-password-btn" class="btn-toggle-password" title="Mostrar u ocultar contraseña" aria-label="Mostrar u ocultar contraseña">
+              <i class="fa-regular fa-eye" id="toggle-password-icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <div id="login-error-msg" style="display: none; color: var(--status-danger); font-size: 0.88rem; margin-bottom: 1rem; text-align: center; font-weight: 700;">
+          <i class="fa-solid fa-triangle-exclamation"></i> Usuario o contraseña incorrectos.
+        </div>
+
+        <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-arrow-right-to-bracket"></i>
+          Ingresar al Panel
+        </button>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       VISTA ADMINISTRADOR (DASHBOARD + BARRA LATERAL + BÚSQUEDAS + GRÁFICAS)
+       =================================================================== -->
+  <div id="admin-view">
+    <!-- Topbar del Admin -->
+    <header class="navbar" style="border-bottom: 1px solid var(--border-color); background: var(--bg-surface);">
+      <div class="container nav-container">
+        <div style="display: flex; align-items: center; gap: 1rem;">
+          <a href="#admin-dashboard" class="brand-logo">
+            one<span class="plus">+</span>
+            <span class="brand-pill" style="background: var(--status-info-bg); color: var(--status-info);">PANEL ADMIN</span>
+          </a>
+        </div>
+
+        <div class="nav-actions">
+          <button id="admin-theme-toggle" class="btn-theme-toggle" title="Cambiar Tema">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+          
+          <button id="btn-back-to-web" class="btn-secondary" style="font-size: 0.85rem; padding: 0.45rem 1rem;">
+            <i class="fa-solid fa-globe"></i>
+            <span>Ver Web Pública</span>
+          </button>
+
+          <button id="btn-logout" class="btn-admin" style="background: var(--status-danger-bg); color: var(--status-danger); border-color: var(--status-danger);">
+            <i class="fa-solid fa-power-off"></i>
+            <span>Cerrar Sesión</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="admin-layout">
+      <!-- BARRA LATERAL (SIDEBAR) -->
+      <aside class="admin-sidebar">
+        <div class="sidebar-heading">Navegación del Gimnasio</div>
+        <ul class="sidebar-menu">
+          <li>
+            <button class="sidebar-item-btn active" data-tab="tab-dashboard">
+              <i class="fa-solid fa-chart-line"></i>
+              <span>Dashboard & Gráficas</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-item-btn" data-tab="tab-checkin">
+              <i class="fa-solid fa-id-card-clip"></i>
+              <span>Check-in de Socios</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-item-btn" data-tab="tab-socios">
+              <i class="fa-solid fa-users"></i>
+              <span>Inscriptos y Cuotas</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-item-btn" data-tab="tab-stock">
+              <i class="fa-solid fa-boxes-stacked"></i>
+              <span>Stock y Suplementos</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-item-btn" data-tab="tab-maquinas">
+              <i class="fa-solid fa-dumbbell"></i>
+              <span>Estado de Máquinas</span>
+            </button>
+          </li>
+          <li>
+            <button class="sidebar-item-btn" data-tab="tab-mensajes">
+              <i class="fa-solid fa-comments"></i>
+              <span>Libro de Visitas</span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="sidebar-footer">
+          <div class="admin-user-info">
+            <div class="admin-avatar">
+              <i class="fa-solid fa-user-shield"></i>
+            </div>
+            <div>
+              <div style="font-weight: 800; font-size: 0.95rem;">Administrador</div>
+              <div style="font-size: 0.78rem; color: var(--accent-green); font-weight: 700;">Sesión Activa</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ÁREA PRINCIPAL DEL DASHBOARD -->
+      <main class="admin-main">
+
+        <!-- TAB 1: DASHBOARD GENERAL Y GRÁFICAS -->
+        <section id="tab-dashboard" class="admin-panel-tab active">
+          <div class="admin-header">
+            <div class="admin-title-area">
+              <h2>Dashboard General & Métricas</h2>
+              <p>Monitoreo en tiempo real de socios, cuotas y flujo horario de ONE+ Gym</p>
+            </div>
+            <button class="btn-primary" onclick="adminRefreshAll()">
+              <i class="fa-solid fa-rotate"></i> Actualizar Todo
+            </button>
+          </div>
+
+          <!-- Métricas KPIs (3 tarjetas principales: Total, Al día, Vencidas) -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-data">
+                <h4>Total Inscriptos</h4>
+                <div class="metric-value" id="kpi-total-socios">0</div>
+                <div class="metric-subtitle"><i class="fa-solid fa-arrow-trend-up"></i> Miembros en padrón</div>
+              </div>
+              <div class="metric-icon-wrap green">
+                <i class="fa-solid fa-users"></i>
+              </div>
+            </div>
+
+            <div class="metric-card">
+              <div class="metric-data">
+                <h4>Cuotas al Día</h4>
+                <div class="metric-value" id="kpi-cuotas-al-dia">0</div>
+                <div class="metric-subtitle" style="color: var(--status-success);"><i class="fa-solid fa-circle-check"></i> Habilitados</div>
+              </div>
+              <div class="metric-icon-wrap blue">
+                <i class="fa-solid fa-circle-check"></i>
+              </div>
+            </div>
+
+            <div class="metric-card metric-card-interactive" onclick="openVencidosModal()" title="Hacé clic para ver la lista de socios con cuota vencida" role="button" tabindex="0">
+              <div class="metric-data">
+                <h4>Cuotas Vencidas</h4>
+                <div class="metric-value" id="kpi-cuotas-vencidas">0</div>
+                <div class="metric-subtitle" style="color: var(--status-danger);"><i class="fa-solid fa-triangle-exclamation"></i> Requiere aviso</div>
+                <div class="metric-click-hint"><i class="fa-solid fa-arrow-pointer"></i> Ver detalle de socios</div>
+              </div>
+              <div class="metric-icon-wrap red">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- SECCIÓN DE GRÁFICAS (FLUJO DE GENTE EN FORMATO COMPLETO) -->
+          <div class="charts-grid single-chart">
+            <!-- Gráfica 1: Flujo de Gente en Diferentes Horas y Días -->
+            <div class="chart-card">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title">
+                    <i class="fa-solid fa-chart-area" style="color: var(--accent-green); margin-right: 6px;"></i>
+                    Flujo de Gente por Horas y Días
+                  </h3>
+                  <small style="color: var(--text-muted);">Horarios pico: 09-11hs y 18-21hs</small>
+                </div>
+                <div class="chart-controls">
+                  <select id="select-dia-flujo" class="chart-select" onchange="updateAttendanceChartDay(this.value)">
+                    <option value="promedio">Promedio Semanal</option>
+                    <option value="lunes">Lunes</option>
+                    <option value="martes">Martes</option>
+                    <option value="miercoles">Miércoles</option>
+                    <option value="jueves">Jueves</option>
+                    <option value="viernes">Viernes</option>
+                    <option value="sabado">Sábados (9 a 12)</option>
+                  </select>
+                </div>
+              </div>
+              <div class="chart-canvas-wrap">
+                <canvas id="chart-attendance"></canvas>
+              </div>
+            </div>
+          </div>
+
+          <!-- Resumen Rápido (Solo visible en Dashboard) -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.75rem;">
+            <div class="card-table-wrap">
+              <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem;">
+                <i class="fa-solid fa-bell" style="color: var(--status-warning); margin-right: 6px;"></i>
+                Alertas de Cuotas por Vencer / Vencidas
+              </h3>
+              <div id="quick-alertas-socios"></div>
+            </div>
+
+            <div class="card-table-wrap">
+              <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 1rem;">
+                <i class="fa-solid fa-wrench" style="color: var(--status-info); margin-right: 6px;"></i>
+                Máquinas en Mantenimiento
+              </h3>
+              <div id="quick-alertas-maquinas"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB CHECK-IN: CONTROL DE ASISTENCIA Y ACCESO EN PUERTA -->
+        <section id="tab-checkin" class="admin-panel-tab">
+          <div class="admin-header">
+            <div class="admin-title-area">
+              <h2>Check-in de Socios en Puerta</h2>
+              <p>Validación de suscripción por DNI, control de saldo de clases y registro de ingreso diario</p>
+            </div>
+          </div>
+
+          <div style="max-width: 820px; margin: 0 auto; width: 100%;">
+            <div class="chart-card checkin-panel-card" style="box-shadow: var(--shadow-md);">
+              <div class="chart-header">
+                <div>
+                  <h3 class="chart-title">
+                    <i class="fa-solid fa-id-card-clip" style="color: var(--accent-green); margin-right: 6px;"></i>
+                    Terminal de Ingreso Diario
+                  </h3>
+                  <small style="color: var(--text-muted);">Búsqueda por DNI para validar cuota, registrar asistencia y descontar clases</small>
+                </div>
+                <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-green); font-size: 0.78rem; padding: 0.35rem 0.75rem; border-radius: 999px; font-weight: 700;">
+                  <i class="fa-solid fa-circle-dot" style="font-size: 0.6rem; margin-right: 4px;"></i> Terminal Activa
+                </span>
+              </div>
+
+              <!-- Buscador de DNI para Check-in -->
+              <div class="checkin-search-box">
+                <div class="checkin-input-wrap">
+                  <i class="fa-solid fa-fingerprint checkin-input-icon"></i>
+                  <input type="text" id="checkin-dni-input" class="checkin-input" placeholder="Ingresá el DNI del socio..." onkeydown="if(event.key==='Enter') executeCheckinSearch()">
+                  <button type="button" class="btn-primary checkin-search-btn" onclick="executeCheckinSearch()">
+                    <i class="fa-solid fa-magnifying-glass"></i> Buscar Socio
+                  </button>
+                </div>
+              </div>
+
+              <!-- Mensaje de error si NO se encuentra el socio -->
+              <div id="checkin-not-found" class="checkin-empty-alert" style="display: none;">
+                <i class="fa-solid fa-triangle-exclamation checkin-alert-icon"></i>
+                <div>
+                  <h4 class="checkin-alert-title">No se encontró ningún socio asociado a este DNI</h4>
+                  <p class="checkin-alert-desc" id="checkin-not-found-text">
+                    Verificá el número ingresado o inscribí al socio en la pestaña de Inscriptos.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Tarjeta de Resultado del Socio Encontrado -->
+              <div id="checkin-result-card" class="checkin-socio-card" style="display: none;">
+                <!-- Se llena dinámicamente con JavaScript -->
+              </div>
+
+              <!-- Estado Inicial cuando no se ha buscado -->
+              <div id="checkin-placeholder" class="checkin-placeholder">
+                <div class="checkin-placeholder-icon">
+                  <i class="fa-solid fa-address-card"></i>
+                </div>
+                <h4 style="margin: 0 0 0.35rem 0; font-size: 1.05rem; font-weight: 800;">Listo para Registrar Asistencia</h4>
+                <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted); max-width: 420px;">
+                  Ingresá el DNI del socio para verificar el estado de su cuota, descontar su clase y registrar su ingreso al gimnasio.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 2: INSCRIPTOS Y ESTADO DE CUOTAS (CON BÚSQUEDA POR TEXTO Y FECHA) -->
+        <section id="tab-socios" class="admin-panel-tab">
+          <div class="admin-header">
+            <div class="admin-title-area">
+              <h2>Gente Inscripta y Estado de Cuotas</h2>
+              <p>Control de socios, búsqueda por nombre, DNI o fecha de vencimiento</p>
+            </div>
+            <button class="btn-primary" onclick="openNewSocioModal()">
+              <i class="fa-solid fa-user-plus"></i> Inscribir Nuevo Socio
+            </button>
+          </div>
+
+          <div class="card-table-wrap">
+            <div class="table-toolbar">
+              <div class="toolbar-search-group">
+                <input type="text" id="search-socio" class="table-search-input" placeholder="Buscar por nombre, DNI o plan..." onkeyup="filterSociosTable()">
+                <input type="date" id="filter-socio-date" class="table-search-input" title="Buscar por fecha de vencimiento" onchange="filterSociosTable()">
+              </div>
+              <div class="filter-btn-group" id="socios-filter-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button type="button" class="btn-table-action filter-btn-active" id="filter-btn-todos" onclick="setSocioEstadoFilter('todos', this)">
+                  <i class="fa-solid fa-users"></i> Todos
+                </button>
+                <button type="button" class="btn-table-action" id="filter-btn-aldia" onclick="setSocioEstadoFilter('Al día', this)">
+                  <i class="fa-solid fa-circle-check"></i> Al día
+                </button>
+                <button type="button" class="btn-table-action" id="filter-btn-porvencer" onclick="setSocioEstadoFilter('Por vencer', this)">
+                  <i class="fa-solid fa-clock"></i> Por vencer
+                </button>
+                <button type="button" class="btn-table-action" id="filter-btn-vencido" onclick="setSocioEstadoFilter('Vencido', this)">
+                  <i class="fa-solid fa-circle-exclamation"></i> Vencidos
+                </button>
+              </div>
+            </div>
+
+            <!-- Indicador visual de filtro activo -->
+            <div id="socios-active-filter-indicator" class="active-filter-banner" style="display: none;">
+              <div class="active-filter-content">
+                <i class="fa-solid fa-filter" style="color: var(--accent-green);"></i>
+                <span id="socios-active-filter-text">Filtro activo: <strong>Todos</strong></span>
+              </div>
+              <button type="button" class="btn-clear-filter" onclick="clearSociosFilters()" title="Restablecer filtros">
+                <i class="fa-solid fa-rotate-left"></i> Restablecer filtros
+              </button>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Nombre y Apellido</th>
+                    <th>DNI</th>
+                    <th>Teléfono</th>
+                    <th>Plan</th>
+                    <th>Importe Cuota</th>
+                    <th>Vencimiento</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="socios-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 3: STOCK Y SUPLEMENTOS (CON BÚSQUEDA) -->
+        <section id="tab-stock" class="admin-panel-tab">
+          <div class="admin-header">
+            <div class="admin-title-area">
+              <h2>Inventario y Stock de Tienda</h2>
+              <p>Control de existencias con buscador por producto y categoría</p>
+            </div>
+            <button class="btn-primary" onclick="openNewStockModal()">
+              <i class="fa-solid fa-plus"></i> Agregar Producto
+            </button>
+          </div>
+
+          <div class="card-table-wrap">
+            <div class="table-toolbar">
+              <div class="toolbar-search-group">
+                <input type="text" id="search-stock" class="table-search-input" placeholder="Buscar por producto o categoría..." onkeyup="filterStockTable()">
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button class="btn-table-action" onclick="filterStockStatus('todos')">Todos</button>
+                <button class="btn-table-action" onclick="filterStockStatus('bajo')">¡Solo Stock Bajo!</button>
+              </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Producto</th>
+                    <th>Categoría</th>
+                    <th>Unidades en Stock</th>
+                    <th>Precio de Venta</th>
+                    <th>Stock Mínimo</th>
+                    <th>Ajustar Stock</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="stock-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 4: ESTADO DE LAS MÁQUINAS (CON BÚSQUEDA Y FECHA) -->
+        <section id="tab-maquinas" class="admin-panel-tab">
+          <div class="admin-header">
+            <div class="admin-title-area">
+              <h2>Estado y Mantenimiento de Máquinas</h2>
+              <p>Monitoreo técnico con buscador por máquina, zona o fecha de service</p>
+            </div>
+            <button class="btn-primary" onclick="openNewMaquinaModal()">
+              <i class="fa-solid fa-plus"></i> Agregar Máquina
+            </button>
+          </div>
+
+          <div class="card-table-wrap">
+            <div class="table-toolbar">
+              <div class="toolbar-search-group">
+                <input type="text" id="search-maquinas" class="table-search-input" placeholder="Buscar máquina, zona o fecha..." onkeyup="filterMaquinasTable()">
+              </div>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+                <button class="btn-table-action" onclick="filterMaquinasEstado('todos')">Todas</button>
+                <button class="btn-table-action" onclick="filterMaquinasEstado('Operativa')">Operativas</button>
+                <button class="btn-table-action" onclick="filterMaquinasEstado('En mantenimiento')">En mantenimiento</button>
+                <button class="btn-table-action" onclick="filterMaquinasEstado('Fuera de servicio')">Fuera de servicio</button>
+              </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Máquina / Equipamiento</th>
+                    <th>Zona</th>
+                    <th>Última Revisión</th>
+                    <th>Estado Actual</th>
+                    <th>Modificar Estado</th>
+                    <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody id="maquinas-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB 6: LIBRO DE VISITAS ADMIN (CON BÚSQUEDA) -->
+        <section id="tab-mensajes" class="admin-panel-tab">
+          <div class="admin-header">
+            <div class="admin-title-area">
+              <h2>Moderación del Libro de Visitas</h2>
+              <p>Búsqueda y moderación de mensajes públicos con clave de administración</p>
+            </div>
+            <button class="btn-secondary" onclick="fetchGuestbookMessages()">
+              <i class="fa-solid fa-rotate-right"></i> Recargar Mensajes
+            </button>
+          </div>
+
+          <div class="card-table-wrap">
+            <div class="table-toolbar">
+              <div class="toolbar-search-group">
+                <input type="text" id="search-mensajes-admin" class="table-search-input" placeholder="Buscar por nombre, texto o fecha..." onkeyup="filterAdminMensajesTable()">
+              </div>
+            </div>
+
+            <div style="overflow-x: auto;">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Fecha</th>
+                    <th>Nombre</th>
+                    <th>Mensaje</th>
+                    <th>Acción</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-mensajes-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 1: INSCRIBIR / EDITAR SOCIO
+       Cartel con los colores del sitio, barrita de scroll, "x" para salir,
+       botones Agregar y Cancelar, y validación estricta de vacíos y números
+       =================================================================== -->
+  <div id="socio-modal" class="modal-overlay">
+    <div class="modal-card modal-card-lg modal-scrollable">
+      <button class="modal-close" onclick="closeSocioModal()" aria-label="Cerrar modal" title="Cerrar">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-user-plus" id="socio-modal-icon"></i>
+        </div>
+        <h3 class="modal-title" id="socio-modal-title">Inscribir Nuevo Socio</h3>
+        <p class="modal-subtitle">Completá todos los campos requeridos para el registro oficial</p>
+      </div>
+
+      <form id="socio-form" onsubmit="handleSaveSocio(event)" novalidate>
+        <input type="hidden" id="socio-id" value="">
+
+        <!-- Error box en caso de validación fallida -->
+        <div id="socio-form-error" class="form-error-alert" style="display: none;">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="socio-form-error-text">Por favor completá los campos correctamente.</span>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="socio-nombre">
+              Nombre y Apellido <span class="required-star">*</span>
+            </label>
+            <input type="text" id="socio-nombre" class="form-input" placeholder="Ej: Lucas Martínez" required>
+            <small class="field-hint" id="hint-nombre">Solo letras y apellidos sin dejar en blanco.</small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="socio-dni">
+              DNI (Solo números) <span class="required-star">*</span>
+            </label>
+            <input type="text" id="socio-dni" class="form-input" placeholder="Ej: 38456123" required inputmode="numeric">
+            <small class="field-hint" id="hint-dni">Solo dígitos numéricos, sin letras ni espacios.</small>
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="socio-telefono">
+              Teléfono / WhatsApp <span class="required-star">*</span>
+            </label>
+            <input type="text" id="socio-telefono" class="form-input" placeholder="+54 387 512-3489" required>
+            <small class="field-hint" id="hint-telefono">Número de contacto para avisos y cuotas.</small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="socio-plan">
+              Plan de Entrenamiento <span class="required-star">*</span>
+            </label>
+            <select id="socio-plan" class="form-input" onchange="autoFillPlanDetails(this.value)">
+              <option value="Pase Libre (Todos los días)">Pase Libre (Todos los días) - $28.000</option>
+              <option value="3 veces a la semana">3 veces a la semana - $22.000</option>
+              <option value="Promo Amigos">Promo Amigos - $23.000 c/u</option>
+              <option value="Personalizados">Personalizados - $43.000</option>
+              <option value="Clase Suelta">Clase Suelta - $8.000</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="socio-cuota">
+              Importe de Cuota ($) <span class="required-star">*</span>
+            </label>
+            <input type="number" id="socio-cuota" class="form-input" placeholder="28000" min="1000" required>
+            <small class="field-hint" id="hint-cuota">Solo números mayores a 0.</small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="socio-vencimiento">
+              Fecha de Vencimiento <span class="required-star">*</span>
+            </label>
+            <input type="date" id="socio-vencimiento" class="form-input" required>
+            <small class="field-hint">Fecha límite de vigencia de la cuota.</small>
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="socio-clases">
+              Clases por Semana / Modalidad
+            </label>
+            <select id="socio-clases" class="form-input">
+              <option value="Ilimitadas">Ilimitadas (Pase Libre / Promo)</option>
+              <option value="3">3 clases semanales</option>
+              <option value="12">12 clases mensuales (Personalizado)</option>
+              <option value="1">1 clase suelta</option>
+            </select>
+            <small class="field-hint">Se descuenta 1 por cada check-in de asistencia.</small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="socio-estado">
+              Estado Inicial de Cuota
+            </label>
+            <select id="socio-estado" class="form-input">
+              <option value="Al día">Al día (Habilitado)</option>
+              <option value="Por vencer">Por vencer</option>
+              <option value="Vencido">Vencido</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="modal-actions-footer">
+          <button type="button" class="btn-secondary" onclick="closeSocioModal()">
+            <i class="fa-solid fa-xmark"></i> Cancelar
+          </button>
+          <button type="submit" class="btn-primary" id="btn-save-socio">
+            <i class="fa-solid fa-user-plus"></i> Agregar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 2: MOSTRAR TODA LA INFORMACIÓN DEL SOCIO
+       Ficha técnica con historial, estado, clases y asistencias
+       =================================================================== -->
+  <div id="socio-info-modal" class="modal-overlay">
+    <div class="modal-card modal-card-lg">
+      <button class="modal-close" onclick="closeSocioInfoModal()" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal-header" style="text-align: left; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <div class="modal-icon-badge" style="margin: 0;">
+          <i class="fa-solid fa-address-card"></i>
+        </div>
+        <div>
+          <h3 class="modal-title" id="info-modal-nombre">Detalles del Socio</h3>
+          <p class="modal-subtitle" id="info-modal-dni">DNI: -</p>
+        </div>
+      </div>
+
+      <div id="info-modal-body" class="socio-details-grid">
+        <!-- Dinámico vía JavaScript -->
+      </div>
+
+      <div class="modal-actions-footer" style="margin-top: 2rem;">
+        <button type="button" class="btn-secondary" onclick="closeSocioInfoModal()">
+          Cerrar
+        </button>
+        <button type="button" class="btn-primary" id="info-modal-action-btn">
+          <i class="fa-solid fa-id-card-clip"></i> Hacer Check-in Ahora
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 3: ADVERTENCIA DE CONFIRMACIÓN PARA BORRAR SOCIO
+       Cartel con advertencia clara y botones Confirmar y Cancelar
+       =================================================================== -->
+  <div id="socio-delete-modal" class="modal-overlay">
+    <div class="modal-card modal-card-danger">
+      <button class="modal-close" onclick="closeDeleteModal()" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge danger-badge">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </div>
+        <h3 class="modal-title" style="color: var(--status-danger);">¿Borrar socio definitivamente?</h3>
+        <p class="modal-subtitle">Esta acción es irreversible y eliminará su registro</p>
+      </div>
+
+      <div class="modal-delete-body">
+        <p>
+          Estás por eliminar del sistema al socio <strong id="delete-socio-name" style="color: var(--text-primary);">-</strong> (DNI: <span id="delete-socio-dni">-</span>).
+        </p>
+        <div class="delete-warning-note">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span>Se perderá todo el historial de cuotas, asistencias y clases acumuladas.</span>
+        </div>
+        <p style="font-weight: 700; margin-top: 1rem; text-align: center;">
+          ¿Estás seguro de que querés realizar esta acción?
+        </p>
+      </div>
+
+      <div class="modal-actions-footer" style="margin-top: 1.5rem;">
+        <button type="button" class="btn-secondary" onclick="closeDeleteModal()">
+          <i class="fa-solid fa-xmark"></i> Cancelar
+        </button>
+        <button type="button" class="btn-admin" id="btn-confirm-delete" style="background: var(--status-danger); color: #ffffff; border-color: var(--status-danger); padding: 0.65rem 1.4rem; font-weight: 800;" onclick="executeDeleteSocio()">
+          <i class="fa-solid fa-trash-can"></i> Confirmar Borrado
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 4: DETALLE DE SOCIOS CON CUOTAS VENCIDAS
+       Se abre al hacer clic en el cartel de "Cuotas Vencidas" del Dashboard
+       =================================================================== -->
+  <div id="modal-cuotas-vencidas" class="modal-overlay">
+    <div class="modal-card modal-card-lg modal-scrollable">
+      <button class="modal-close" onclick="closeVencidosModal()" aria-label="Cerrar modal" title="Cerrar">&times;</button>
+      
+      <div class="modal-header" style="text-align: left; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+        <div class="modal-icon-badge danger-badge" style="margin: 0;">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </div>
+        <div>
+          <h3 class="modal-title" style="color: var(--status-danger); margin-bottom: 0.2rem;">Socios con Cuotas Vencidas</h3>
+          <p class="modal-subtitle" id="vencidos-modal-subtitle">Alumnos con pago pendiente para contactar y regularizar</p>
+        </div>
+      </div>
+
+      <div id="vencidos-modal-body" class="vencidos-list-container">
+        <!-- Se genera dinámicamente con JavaScript -->
+      </div>
+
+      <div class="modal-actions-footer" style="margin-top: 1.75rem;">
+        <button type="button" class="btn-secondary" onclick="closeVencidosModal()">
+          <i class="fa-solid fa-xmark"></i> Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 4B: REGISTRAR COBRO DE CUOTA / CAMBIO DE PLAN / MESES ADELANTADOS
+       Soporta: pagar por lo mismo, cambiar de plan, y abonar hasta 3 meses adelantados.
+       =================================================================== -->
+  <div id="modal-cobro-cuota" class="modal-overlay">
+    <div class="modal-card modal-card-lg modal-scrollable">
+      <button class="modal-close" onclick="closeCobroModal()" aria-label="Cerrar modal" title="Cerrar">&times;</button>
+      
+      <div class="modal-header" style="text-align: left; display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+        <div class="modal-icon-badge" style="margin: 0; background: rgba(16, 185, 129, 0.15); color: var(--accent-green);">
+          <i class="fa-solid fa-cash-register"></i>
+        </div>
+        <div>
+          <h3 class="modal-title" style="margin-bottom: 0.2rem;">Cobro de Cuota y Renovación</h3>
+          <p class="modal-subtitle">Gestioná el pago mensual, cambio de modalidad y cuotas por adelantado</p>
+        </div>
+      </div>
+
+      <!-- Resumen actual del socio -->
+      <div class="cobro-socio-summary" id="cobro-socio-summary-card">
+        <!-- Renderizado dinámico desde JS con datos del alumno -->
+      </div>
+
+      <form id="form-cobro-cuota" onsubmit="handleConfirmarCobro(event)" style="margin-top: 1.25rem;">
+        <input type="hidden" id="cobro-socio-id" value="">
+
+        <!-- Paso 1: Mantener mismo plan o cambiar -->
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label class="form-label" style="font-size: 0.98rem; font-weight: 800; margin-bottom: 0.65rem; color: var(--text-primary);">
+            <i class="fa-solid fa-clipboard-list" style="color: var(--accent-green); margin-right: 6px;"></i>
+            1. Modalidad de Pago del Plan:
+          </label>
+          <div class="cobro-plan-choice-grid">
+            <label class="cobro-choice-card active" id="label-choice-same" onclick="selectPlanChoice('same')">
+              <input type="radio" name="plan_choice_mode" value="same" id="choice-mode-same" checked onchange="handlePlanChoiceChange()">
+              <div class="choice-card-content">
+                <div class="choice-title"><i class="fa-solid fa-repeat"></i> Mantener Plan Actual</div>
+                <span id="choice-same-plan-label" class="choice-subtext">Pagar por el mismo plan contratado</span>
+              </div>
+            </label>
+
+            <label class="cobro-choice-card" id="label-choice-change" onclick="selectPlanChoice('change')">
+              <input type="radio" name="plan_choice_mode" value="change" id="choice-mode-change" onchange="handlePlanChoiceChange()">
+              <div class="choice-card-content">
+                <div class="choice-title"><i class="fa-solid fa-shuffle"></i> Cambiar de Plan</div>
+                <span class="choice-subtext">Elegir una nueva modalidad de entrenamiento</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Selector de nuevo plan (visible si elige cambiar) -->
+        <div id="cobro-plan-change-section" class="cobro-plans-options-wrap" style="display: none; margin-bottom: 1.25rem;">
+          <label class="form-label" for="select-nuevo-plan" style="margin-bottom: 0.5rem; font-weight: 700;">
+            Seleccioná el nuevo plan de ONE+ Gym:
+          </label>
+          <select id="select-nuevo-plan" class="form-input" onchange="handleNewPlanSelected(this.value)" style="font-weight: 600;">
+            <option value="Pase Libre (Todos los días)" data-precio="28000">Pase Libre (Todos los días) — $28.000 / mes (Clases ilimitadas)</option>
+            <option value="3 veces a la semana" data-precio="22000">3 veces a la semana — $22.000 / mes (3 clases semanales)</option>
+            <option value="Promo Amigos" data-precio="23000">Promo Amigos — $23.000 / mes cada uno (Clases ilimitadas)</option>
+            <option value="Personalizados" data-precio="43000">Personalizados — $43.000 / mes (12 clases con instructor)</option>
+            <option value="Clase individual" data-precio="8000">Clase individual — $8.000 (Pase por 1 clase)</option>
+          </select>
+        </div>
+
+        <!-- Paso 2: Meses por adelantado (máximo 3) -->
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 0.5rem;">
+            <label class="form-label" style="font-size: 0.98rem; font-weight: 800; margin-bottom: 0; color: var(--text-primary);">
+              <i class="fa-solid fa-calendar-plus" style="color: var(--accent-green); margin-right: 6px;"></i>
+              2. Meses a Abonar (Pago por Adelantado):
+            </label>
+            <span class="badge-hint-adelantado"><i class="fa-solid fa-circle-info"></i> Máximo permitido: 3 meses</span>
+          </div>
+          <div class="meses-selector-grid">
+            <button type="button" class="btn-meses-option active" id="btn-meses-1" onclick="selectMesesCobro(1)">
+              <div class="meses-num">1</div>
+              <div class="meses-label">1 Mes (Estándar)</div>
+            </button>
+            <button type="button" class="btn-meses-option" id="btn-meses-2" onclick="selectMesesCobro(2)">
+              <div class="meses-num">2</div>
+              <div class="meses-label">2 Meses (1 adelantado)</div>
+            </button>
+            <button type="button" class="btn-meses-option" id="btn-meses-3" onclick="selectMesesCobro(3)">
+              <div class="meses-num">3</div>
+              <div class="meses-label">3 Meses (2 adelantados)</div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Paso 3: Resumen dinámico del cobro en vivo -->
+        <div class="cobro-live-summary-card">
+          <div class="summary-line">
+            <span>Plan a liquidar:</span>
+            <strong id="summary-cobro-plan-name">-</strong>
+          </div>
+          <div class="summary-line">
+            <span>Valor mensual:</span>
+            <span id="summary-cobro-cuota-mensual" style="font-weight: 700;">$0</span>
+          </div>
+          <div class="summary-line">
+            <span>Período abonado:</span>
+            <span id="summary-cobro-meses-txt" style="font-weight: 700;">1 mes</span>
+          </div>
+          <div class="summary-line highlight-vencimiento">
+            <span><i class="fa-solid fa-calendar-check" style="color: var(--accent-green);"></i> Nuevo Vencimiento:</span>
+            <strong id="summary-cobro-nuevo-vencimiento" style="color: var(--accent-green); font-size: 1.05rem;">-</strong>
+          </div>
+          <div class="summary-total-divider"></div>
+          <div class="summary-line summary-total-row">
+            <span style="font-weight: 800; font-size: 1.05rem;">TOTAL A COBRAR:</span>
+            <span class="summary-total-amount" id="summary-cobro-total-amount">$0</span>
+          </div>
+        </div>
+
+        <div class="modal-actions-footer" style="margin-top: 1.5rem;">
+          <button type="button" class="btn-secondary" onclick="closeCobroModal()">
+            <i class="fa-solid fa-xmark"></i> Cancelar
+          </button>
+          <button type="submit" class="btn-primary" id="btn-confirm-cobro-action" style="font-weight: 800; padding: 0.75rem 1.75rem;">
+            <i class="fa-solid fa-circle-check"></i> Confirmar Cobro
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 5: AGREGAR / EDITAR PRODUCTO DE STOCK
+       Barrita de desplazamiento, 'X' para salir, botones Agregar y Cancelar
+       =================================================================== -->
+  <div id="stock-modal" class="modal-overlay">
+    <div class="modal-card modal-card-lg modal-scrollable">
+      <button class="modal-close" onclick="closeStockModal()" aria-label="Cerrar modal" title="Cerrar">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-boxes-stacked" id="stock-modal-icon"></i>
+        </div>
+        <h3 class="modal-title" id="stock-modal-title">Agregar Producto</h3>
+        <p class="modal-subtitle">Completá los datos del artículo para el inventario de la tienda</p>
+      </div>
+
+      <form id="stock-form" onsubmit="handleSaveStock(event)" novalidate>
+        <input type="hidden" id="stock-prod-id" value="">
+
+        <div id="stock-form-error" class="form-error-alert" style="display: none;">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="stock-form-error-text">Por favor completá los campos correctamente.</span>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="stock-prod-nombre">
+              Nombre del Producto <span class="required-star">*</span>
+            </label>
+            <input type="text" id="stock-prod-nombre" class="form-input" placeholder="Ej: Whey Protein Vainilla 1kg" required>
+            <small class="field-hint">Nombre descriptivo del artículo.</small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="stock-prod-categoria">
+              Categoría <span class="required-star">*</span>
+            </label>
+            <select id="stock-prod-categoria" class="form-input">
+              <option value="Proteínas">Proteínas</option>
+              <option value="Refrigerados">Refrigerados (Yogur, etc.)</option>
+              <option value="Salud Articular">Salud Articular (Colágeno)</option>
+              <option value="Pre-entrenos">Pre-entrenos & Energía</option>
+              <option value="Rendimiento">Rendimiento (Creatina, etc.)</option>
+              <option value="Bebidas">Bebidas e Hidratación</option>
+              <option value="Snacks & Barras">Snacks & Barras</option>
+              <option value="Accesorios">Accesorios & Shakers</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="stock-prod-unidades">
+              Unidades en Stock <span class="required-star">*</span>
+            </label>
+            <input type="number" id="stock-prod-unidades" class="form-input" placeholder="15" min="0" required>
+            <small class="field-hint">Cantidad actual disponible en estantería.</small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="stock-prod-precio">
+              Precio de Venta ($) <span class="required-star">*</span>
+            </label>
+            <input type="number" id="stock-prod-precio" class="form-input" placeholder="38000" min="100" required>
+            <small class="field-hint">Valor en pesos argentinos.</small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="stock-prod-minimo">
+            Stock Mínimo para Alerta
+          </label>
+          <input type="number" id="stock-prod-minimo" class="form-input" placeholder="5" min="1" value="5">
+          <small class="field-hint">Si el stock cae por debajo de este valor, se marcará en rojo como aviso de reposición.</small>
+        </div>
+
+        <div class="modal-actions-footer">
+          <button type="button" class="btn-secondary" onclick="closeStockModal()">
+            <i class="fa-solid fa-xmark"></i> Cancelar
+          </button>
+          <button type="submit" class="btn-primary" id="btn-save-stock">
+            <i class="fa-solid fa-plus"></i> Agregar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 6: BORRAR PRODUCTO DE STOCK (CONFIRMACIÓN)
+       =================================================================== -->
+  <div id="stock-delete-modal" class="modal-overlay">
+    <div class="modal-card modal-card-danger">
+      <button class="modal-close" onclick="closeDeleteStockModal()" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge danger-badge">
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+        <h3 class="modal-title" style="color: var(--status-danger);">¿Borrar producto de stock?</h3>
+        <p class="modal-subtitle">Esta acción quitará el producto del inventario</p>
+      </div>
+
+      <div class="modal-delete-body">
+        <p>
+          Estás por eliminar <strong id="delete-stock-name" style="color: var(--text-primary);">-</strong> de la lista de productos disponibles.
+        </p>
+        <div class="delete-warning-note">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span>El artículo dejará de figurar en el control de stock y ventas de ONE+ Gym.</span>
+        </div>
+        <p style="font-weight: 700; margin-top: 1rem; text-align: center;">
+          ¿Estás seguro de que querés realizar esta acción?
+        </p>
+      </div>
+
+      <div class="modal-actions-footer" style="margin-top: 1.5rem;">
+        <button type="button" class="btn-secondary" onclick="closeDeleteStockModal()">
+          <i class="fa-solid fa-xmark"></i> Cancelar
+        </button>
+        <button type="button" class="btn-admin" id="btn-confirm-delete-stock" style="background: var(--status-danger); color: #ffffff; border-color: var(--status-danger); padding: 0.65rem 1.4rem; font-weight: 800;" onclick="executeDeleteStock()">
+          <i class="fa-solid fa-trash-can"></i> Confirmar Borrado
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 7: AGREGAR / EDITAR MÁQUINA
+       Barrita de desplazamiento, 'X' para salir, botones Agregar y Cancelar
+       =================================================================== -->
+  <div id="maquina-modal" class="modal-overlay">
+    <div class="modal-card modal-card-lg modal-scrollable">
+      <button class="modal-close" onclick="closeMaquinaModal()" aria-label="Cerrar modal" title="Cerrar">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge">
+          <i class="fa-solid fa-dumbbell" id="maquina-modal-icon"></i>
+        </div>
+        <h3 class="modal-title" id="maquina-modal-title">Agregar Máquina</h3>
+        <p class="modal-subtitle">Ingresá los datos del equipamiento para monitoreo técnico y revisiones</p>
+      </div>
+
+      <form id="maquina-form" onsubmit="handleSaveMaquina(event)" novalidate>
+        <input type="hidden" id="maquina-id" value="">
+
+        <div id="maquina-form-error" class="form-error-alert" style="display: none;">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span id="maquina-form-error-text">Por favor completá los campos correctamente.</span>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="maquina-nombre">
+              Nombre de la Máquina / Equipo <span class="required-star">*</span>
+            </label>
+            <input type="text" id="maquina-nombre" class="form-input" placeholder="Ej: Prensa de Piernas 45°" required>
+            <small class="field-hint">Identificación clara del equipo.</small>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="maquina-zona">
+              Zona del Gimnasio <span class="required-star">*</span>
+            </label>
+            <select id="maquina-zona" class="form-input">
+              <option value="Cardio">Cardio & Cintas</option>
+              <option value="Piernas">Piernas & Glúteos</option>
+              <option value="Musculación">Musculación & Poleas</option>
+              <option value="Pecho">Pecho & Banco</option>
+              <option value="Espalda">Espalda & Dorsal</option>
+              <option value="Brazos">Brazos & Mancuernas</option>
+              <option value="Funcional">Funcional & Peso Libre</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row-2col">
+          <div class="form-group">
+            <label class="form-label" for="maquina-estado">
+              Estado Actual <span class="required-star">*</span>
+            </label>
+            <select id="maquina-estado" class="form-input">
+              <option value="Operativa">Operativa (En uso regular)</option>
+              <option value="En mantenimiento">En mantenimiento (Reparación programada)</option>
+              <option value="Fuera de servicio">Fuera de servicio (Inhabilitada temporalmente)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="maquina-revision">
+              Fecha de Última Revisión <span class="required-star">*</span>
+            </label>
+            <input type="date" id="maquina-revision" class="form-input" required>
+            <small class="field-hint">Fecha de service o inspección técnica.</small>
+          </div>
+        </div>
+
+        <div class="modal-actions-footer">
+          <button type="button" class="btn-secondary" onclick="closeMaquinaModal()">
+            <i class="fa-solid fa-xmark"></i> Cancelar
+          </button>
+          <button type="submit" class="btn-primary" id="btn-save-maquina">
+            <i class="fa-solid fa-plus"></i> Agregar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       MODAL 8: BORRAR MÁQUINA (CONFIRMACIÓN)
+       =================================================================== -->
+  <div id="maquina-delete-modal" class="modal-overlay">
+    <div class="modal-card modal-card-danger">
+      <button class="modal-close" onclick="closeDeleteMaquinaModal()" aria-label="Cerrar modal">&times;</button>
+      
+      <div class="modal-header">
+        <div class="modal-icon-badge danger-badge">
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+        <h3 class="modal-title" style="color: var(--status-danger);">¿Borrar máquina?</h3>
+        <p class="modal-subtitle">Esta acción eliminará el registro de equipamiento</p>
+      </div>
+
+      <div class="modal-delete-body">
+        <p>
+          Estás por eliminar <strong id="delete-maquina-name" style="color: var(--text-primary);">-</strong> del listado de máquinas del gimnasio.
+        </p>
+        <div class="delete-warning-note">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span>El equipo ya no aparecerá en los reportes técnicos ni en las alertas de mantenimiento.</span>
+        </div>
+        <p style="font-weight: 700; margin-top: 1rem; text-align: center;">
+          ¿Estás seguro de que querés realizar esta acción?
+        </p>
+      </div>
+
+      <div class="modal-actions-footer" style="margin-top: 1.5rem;">
+        <button type="button" class="btn-secondary" onclick="closeDeleteMaquinaModal()">
+          <i class="fa-solid fa-xmark"></i> Cancelar
+        </button>
+        <button type="button" class="btn-admin" id="btn-confirm-delete-maquina" style="background: var(--status-danger); color: #ffffff; border-color: var(--status-danger); padding: 0.65rem 1.4rem; font-weight: 800;" onclick="executeDeleteMaquina()">
+          <i class="fa-solid fa-trash-can"></i> Confirmar Borrado
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ===================================================================
+       TOAST CONTAINER PARA NOTIFICACIONES
+       =================================================================== -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- SCRIPT JS -->
+  <script src="/script.js"></script>
+</body>
+</html>

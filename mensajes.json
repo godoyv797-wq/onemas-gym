@@ -1,0 +1,20 @@
+[
+  {
+    "id": "msg-101",
+    "nombre": "Agustín Morales",
+    "texto": "Excelente ambiente en ONE+! La promo con amigos nos vino impecable con mi compañero. El equipamiento y las pesas están siempre en perfecto estado.",
+    "fecha": "22/10/2026 18:30"
+  },
+  {
+    "id": "msg-102",
+    "nombre": "Valeria Gómez",
+    "texto": "Me encanta el yogur griego y el colágeno que venden en el bar/recepción. Muy buen horario para entrenar después del trabajo.",
+    "fecha": "23/10/2026 11:15"
+  },
+  {
+    "id": "msg-103",
+    "nombre": "Luciano Ruiz",
+    "texto": "Los entrenamientos personalizados valen cada centavo. En 2 meses mejoré mi fuerza y técnica un montón. Super recomendado!",
+    "fecha": "23/10/2026 14:00"
+  }
+]
