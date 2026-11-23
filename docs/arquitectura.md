@@ -8,7 +8,9 @@ Este documento detalla las decisiones técnicas, patrones y estructura del siste
 El proyecto utiliza una arquitectura desacoplada pero unificada en despliegue:
 * **Backend:** API REST construida con FastAPI que sirve tanto los endpoints de datos JSON como los archivos estáticos de la interfaz (`index.html`, `styles.css`, `script.js`).
 * **Frontend:** Single Page Application (SPA) en Vanilla JavaScript que consume la API REST local mediante `fetch()`.
-* **Persistencia:** Flat-File JSON transaccional para simplicidad operativa y portabilidad sin dependencias de servicios externos.
+* **Persistencia Dual (Cloud & Local):** 
+  * **Supabase (PostgreSQL en la nube):** Conexión principal mediante API REST PostgREST para base de datos relacional escalable.
+  * **Flat-File JSON (`gym_data.json` y `mensajes.json`):** Respaldo local y fallback automático transparente en caso de operar sin conexión a la nube.
 
 ---
 
@@ -21,9 +23,9 @@ El proyecto utiliza una arquitectura desacoplada pero unificada en despliegue:
        ├── GET /styles.css  ──> styles.css
        └── GET /script.js  ──> script.js
        │
-       ├── POST /api/admin/socios/checkin  ──> [ FastAPI ] ──> [ gym_data.json ]
-       ├── POST /api/admin/socios/cobrar   ──> [ FastAPI ] ──> [ gym_data.json ]
-       └── GET /api/mensajes               ──> [ FastAPI ] ──> [ mensajes.json ]
+       ├── POST /api/admin/socios/checkin  ──> [ FastAPI ] ──> [ Supabase / gym_data.json ]
+       ├── POST /api/admin/socios/cobrar   ──> [ FastAPI ] ──> [ Supabase / gym_data.json ]
+       └── GET /api/mensajes               ──> [ FastAPI ] ──> [ Supabase / mensajes.json ]
 ```
 
 ---

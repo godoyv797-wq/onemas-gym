@@ -14,6 +14,8 @@ from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 from dotenv import load_dotenv
 
+import database
+
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent
 
@@ -56,19 +58,17 @@ class Mensaje(BaseModel):
 
 # Helper functions for Guestbook persistence
 def leer_mensajes() -> List[dict]:
-    if not DATA_FILE.exists():
-        DATA_FILE.write_text("[]", encoding="utf-8")
-        return []
-    try:
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except Exception:
-        return []
+    if database.is_supabase_enabled():
+        supa_msgs = database.cargar_mensajes_supabase()
+        if supa_msgs is not None:
+            return supa_msgs
+    return database.cargar_mensajes_local()
 
 
 def guardar_mensajes(mensajes: List[dict]) -> None:
-    with open(DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(mensajes, f, indent=2, ensure_ascii=False)
+    database.guardar_mensajes_local(mensajes)
+    if database.is_supabase_enabled() and mensajes:
+        database.sincronizar_entidad_supabase("mensajes", mensajes)
 
 
 # Estructura base para el Flujo de Asistencia por horas y días
@@ -376,30 +376,35 @@ def actualizar_estados_socios(data: dict) -> bool:
 
 
 def leer_gym_data() -> dict:
-    if not GYM_DATA_FILE.exists():
-        with open(GYM_DATA_FILE, "w", encoding="utf-8") as f:
-            json.dump(DEFAULT_GYM_DATA, f, indent=2, ensure_ascii=False)
-        return copy.deepcopy(DEFAULT_GYM_DATA)
-    try:
-        with open(GYM_DATA_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-            if "flujo_asistencia" not in data:
-                data["flujo_asistencia"] = copy.deepcopy(DEFAULT_FLUJO)
-            if "checkins_log" not in data:
-                data["checkins_log"] = []
-            
-            # Auto-actualizar estado de vencimiento de las cuotas al instante que corresponda
-            if actualizar_estados_socios(data):
-                guardar_gym_data(data)
+    data = None
+    if database.is_supabase_enabled():
+        data = database.cargar_gym_data_supabase(DEFAULT_FLUJO)
+    if not data:
+        data = database.cargar_gym_data_local(DEFAULT_GYM_DATA, DEFAULT_FLUJO)
 
-            return data
-    except Exception:
-        return copy.deepcopy(DEFAULT_GYM_DATA)
+    # Auto-actualizar estado de vencimiento de las cuotas al instante que corresponda
+    if actualizar_estados_socios(data):
+        guardar_gym_data(data)
+
+    return data
 
 
 def guardar_gym_data(data: dict) -> None:
-    with open(GYM_DATA_FILE, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2, ensure_ascii=False)
+    database.guardar_gym_data_local(data)
+    if database.is_supabase_enabled():
+        if "socios" in data:
+            database.sincronizar_entidad_supabase("socios", data["socios"])
+        if "stock" in data:
+            database.sincronizar_entidad_supabase("stock", data["stock"])
+        if "maquinas" in data:
+            database.sincronizar_entidad_supabase("maquinas", data["maquinas"])
+        if "finanzas" in data and "movimientos" in data["finanzas"]:
+            database.sincronizar_entidad_supabase("finanzas_movimientos", data["finanzas"]["movimientos"])
+        if "flujo_asistencia" in data:
+            flujo_rows = [{"dia": dia, "datos": datos} for dia, datos in data["flujo_asistencia"].items()]
+            database.sincronizar_entidad_supabase("flujo_asistencia", flujo_rows)
+        if "checkins_log" in data and data["checkins_log"]:
+            database.sincronizar_entidad_supabase("checkins_log", data["checkins_log"])
 
 
 # ==========================================

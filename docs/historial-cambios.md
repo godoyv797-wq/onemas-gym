@@ -64,3 +64,12 @@ Registro cronológico de requerimientos y características implementadas en ONE+
   * Pago de hasta **3 meses por adelantado** con cálculo en tiempo real.
 * **Marcador Visual de Filtros:**
   * Botones de estado con clase `.filter-btn-active` y banner informativo `#socios-active-filter-indicator`.
+
+---
+
+### Versión 1.6.0
+* **Migración a Base de Datos Supabase (PostgreSQL en la Nube):**
+  * Creación de `supabase_schema.sql` con definición de tablas relacionales (`socios`, `stock`, `maquinas`, `finanzas_movimientos`, `checkins_log`, `flujo_asistencia`, `mensajes`), índices y políticas de seguridad RLS.
+  * Módulo `database.py` con arquitectura híbrida: lee y escribe en Supabase PostgREST cuando está configurado, con fallback automático transparente a archivos JSON locales.
+  * Script de migración `migrate_to_supabase.py` para sembrar todos los datos existentes en la nube con un solo comando.
+  * Plantilla `.env.example` con variables de entorno para Supabase.
